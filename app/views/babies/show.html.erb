@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @baby.name %>
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Veces que ha tomado hoy</th>
+      <th>Fecha ultima vez que bebio</th>
+      <th>Cuanto tiempo ha tomado hoy</th>
+      <th>Cuanta cantidad ha Bebido Hoy</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+    byebug
+      <td><%= @baby.breast_feeding_times_today %></td>
+      <td><%= @baby.last_time_drinking %></td>
+      <td><%= @baby.breast_feeding_duration_today %></td>
+      <td><%= @baby.breast_feeding_quantity_today %></td>
+    </tr>
+  </tbody>
+</table>
+
+<%= link_to 'Edit', edit_baby_path(@baby) %> |
+<%= link_to 'Back', babies_path %>
